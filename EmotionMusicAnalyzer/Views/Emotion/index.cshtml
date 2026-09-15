@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Emotion Music Analyzer";
+}
+
+<div class="container mt-4">
+
+    <h1>Emotion Based Music Analyzer</h1>
+
+    <div class="text-center mt-4">
+
+        <video id="video"
+               width="500"
+               height="375"
+               autoplay
+               playsinline
+               style="border: 2px solid black;">
+        </video>
+
+        <br />
+        <br />
+
+        <button id="startCamera"
+                class="btn btn-primary">
+            Start Camera
+        </button>
+
+        <button id="captureEmotion"
+                class="btn btn-success">
+            Detect Emotion
+        </button>
+
+    </div>
+
+    <div class="mt-4">
+
+        <h2>
+            Emotion:
+            <span id="emotion">-</span>
+        </h2>
+
+        <h4>
+            Confidence:
+            <span id="confidence">-</span>
+        </h4>
+
+    </div>
+
+    <div id="musicSection" class="mt-4">
+
+        <h2>🎧 Recommended Music</h2>
+
+        <div id="songs"></div>
+
+    </div>
+
+</div>
+
+<script src="~/js/emotion.js"></script>
